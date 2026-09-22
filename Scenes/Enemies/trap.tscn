@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://c5yymryvnq6gv"]
+
+[ext_resource type="Script" uid="uid://dlb3ya3jbbrjg" path="res://Scripts/Enemies/trap.gd" id="1_tcysx"]
+[ext_resource type="Texture2D" uid="uid://brd1mq8thyee8" path="res://Assets/Zelda_NES_Enemy_Items_boss/03_Underworld_Enemies/Trap.png" id="2_lpjtd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_67wym"]
+radius = 7.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_akpyo"]
+atlas = ExtResource("2_lpjtd")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uivdd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_akpyo")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="trap" type="CharacterBody2D" unique_id=901717271]
+script = ExtResource("1_tcysx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=55426285]
+shape = SubResource("CircleShape2D_67wym")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1828547310]
+sprite_frames = SubResource("SpriteFrames_uivdd")
