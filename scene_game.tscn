@@ -153,7 +153,7 @@ collision_layer = 2
 collision_mask = 524289
 
 [node name="trap" parent="." unique_id=901717271 instance=ExtResource("6_s53oh")]
-position = Vector2(42, 233)
+position = Vector2(21, 243)
 
 [connection signal="body_entered" from="Camera2D/ScreenTransition/Area2D_UP" to="Camera2D/ScreenTransition" method="_on_area_2d_up_body_entered"]
 [connection signal="body_entered" from="Camera2D/ScreenTransition/Area2D_DOWN" to="Camera2D/ScreenTransition" method="_on_area_2d_down_body_entered"]
